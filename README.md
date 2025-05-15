@@ -11,11 +11,11 @@
 Ensure you have the following Python libraries installed: pandas, numpy, matplotlib, scipy, tkinter.
 
 You can install missing packages via pip, for example:
-# pip install pandas numpy matplotlib scipy
+**pip install pandas numpy matplotlib scipy**
 Place the CSV file MSR457988x_250314_163216.csv (or any properly formatted accelerometer CSV data file) in the same directory as the Python script.
 
 Run the program by executing:
-# python main_code_oop.py
+**python main_code_oop.py**
 
 ### How to Use the Program
 
@@ -56,8 +56,7 @@ Data and methods related to plotting behavior are encapsulated inside classes. F
     def load_data(self, filename):
         # Reads and preprocesses the CSV accelerometer data
         # Returns time and acceleration arrays for X, Y, Z axes
-        ...
-   ```
+    ```
 
    **Encapsulation** The internal state (self.data) and GUI components are private to the class and accessed only via methods.
 
@@ -66,12 +65,12 @@ Data and methods related to plotting behavior are encapsulated inside classes. F
 2. **Inheritance:** An abstract base class GraphStrategy defines the interface for plotting strategies. Concrete graph classes inherit and override the plot method:
 
 
-```python
-   class GraphStrategy:
+    ```python
+    class GraphStrategy:
     def plot(self, relative_time, acc_x, acc_y, acc_z):
         raise NotImplementedError("Subclasses should implement this!")
 
-class XAxisGraph(GraphStrategy):
+    class XAxisGraph(GraphStrategy):
     def plot(self, relative_time, acc_x, acc_y, acc_z):
         plt.plot(relative_time, acc_x)
         plt.title('X-axis Acceleration')
@@ -87,7 +86,7 @@ class XAxisGraph(GraphStrategy):
    
 
 	```python
-   class GraphContext:
+    class GraphContext:
     def __init__(self, strategy: GraphStrategy):
         self._strategy = strategy
 
