@@ -46,7 +46,7 @@ My application is written in one python script:
 Data and methods related to plotting behavior are encapsulated inside classes. For example, the AccelerometerApp class encapsulates the GUI logic and data loading:
    
     ```python
- class AccelerometerApp:
+    class AccelerometerApp:
     def __init__(self, master):
         self.master = master
         self.master.title("Accelerometer Data Processor")
